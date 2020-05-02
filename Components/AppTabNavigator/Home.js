@@ -11,17 +11,32 @@ export default class Home extends Component {
     
     render() {
         return (
-            <View style={style.container}>
-                <Text>HomeTab</Text>
+            <View style={styles.container}>
+                <View style={styles.TopContainer}>
+                    <Text>TopHomeTab</Text>
+                </View>
+                <View style={styles.BottomContainer}>
+                    <Text>BottomHomeTab</Text>
+                </View>
             </View>
         );
     }
 }
- 
-const style = StyleSheet.create({
+
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    TopContainer:{
+        flex:3,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    BottomContainer:{
+        flex:7,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });

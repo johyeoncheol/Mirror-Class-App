@@ -77,7 +77,7 @@ export default class ToDo extends Component {
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content" />
-                <Text style={styles.title}>ToDo App</Text>
+                <Text style={styles.title}>ToDo List</Text>
                 <View style={styles.card}>
                     <TextInput
                         style={styles.input}
