@@ -8,6 +8,8 @@ import Home from './AppTabNavigator/Home';
 import Weather from './AppTabNavigator/Weather/Weather';
 import SmartControl from './AppTabNavigator/SmartControl';
 import ToDo from './AppTabNavigator/ToDo/ToDo';
+import Setting from './AppTabNavigator/Setting';
+import Login from './loginScreen';
 
 import { Font } from 'expo';
 import { Icon } from 'native-base';
@@ -15,22 +17,23 @@ import { Icon } from 'native-base';
 
 
 const AppTabNavigator = createBottomTabNavigator({
-    Home:{
-        screen:Home
+    Home: {
+        screen: Home
     },
-    FamilyChat:{
-        screen:FamilyChat
+    ToDo: {
+        screen: ToDo
     },
-    ToDo:{
-        screen:ToDo
+    SmartControl: {
+        screen: SmartControl
     },
-    SmartControl:{
-        screen:SmartControl
+    ToDo: {
+        screen: ToDo
     },
-    ToDo:{
-        screen:ToDo
-    },Weather:{
-        screen:Weather
+     Weather: {
+        screen: Weather
+    },
+     Setting: {
+        screen: Setting
     }
 });
 const App = createAppContainer(AppTabNavigator);
@@ -56,7 +59,7 @@ class MainScreen extends Component {
         headerLeft: () => (<Icon name='md-person' style={{ paddingLeft: 15 }} />),
         headerTitle: () => (
             <View>
-                <Text style={{fontSize: 20,color:"#698221"}}>
+                <Text style={{fontSize: 20,color:"#ED1935"}}>
                     Mirror Class
                 </Text>
             </View>),
