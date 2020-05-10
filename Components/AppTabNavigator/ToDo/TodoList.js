@@ -7,6 +7,8 @@ import {
     Dimensions,
     TextInput
 } from "react-native";
+
+//prop-types는 타입 체크를 하기 위해 사용한다.
 import propTypes from "prop-types";
 
 const { width, height } = Dimensions.get("window");
