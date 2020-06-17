@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { View,Text,StyleSheet, YellowBox } from 'react-native';
+import { View,Text } from 'react-native';
 import { createBottomTabNavigator} from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
-
-import FamilyChat from './AppTabNavigator/FamilyChat';
+import { createStackNavigator} from 'react-navigation-stack';
 import Home from './AppTabNavigator/Home';
 import Weather from './AppTabNavigator/Weather/Weather';
-import SmartControl from './AppTabNavigator/SmartControl';
+import SmartControl from './AppTabNavigator/Control/SmartControl';
 import ToDo from './AppTabNavigator/ToDo/ToDo';
 import Setting from './AppTabNavigator/Setting';
-import Login from './loginScreen';
 
 import { Font } from 'expo';
 import { Icon } from 'native-base';
@@ -39,7 +37,19 @@ const AppTabNavigator = createBottomTabNavigator({
 const App = createAppContainer(AppTabNavigator);
 
 
-class MainScreen extends Component {
+// const main = createStackNavigator({ //이동할 페이지들 리스트 
+//     MyPage: {
+//         screen: MyPage
+//     },
+//     FamilyChat: {
+//         screen: FamilyChat
+//     },
+// });
+// const App2 = createAppContainer(main);
+
+
+
+export default class MainScreen extends Component {
     // constructor(props) {
     //     super(props);
         
@@ -54,16 +64,18 @@ class MainScreen extends Component {
     //     // 폰트로드가 완료되어 true로 변경
     //     this.setState({ isReady: true });
     //   }
-//Icon button onpress 
-    static navigationOptions = {
-        headerLeft: () => (<Icon name='md-person' style={{ paddingLeft: 15 }} />),
-        headerTitle: () => (
-            <View>
-                <Text style={{fontSize: 20,color:"#ED1935"}}>
-                    Mirror Class
-                </Text>
-            </View>),
-        headerRight: ()=>(<Icon name='md-chatboxes' style={{paddingRight:15}} />)
+    //Icon button onpress 
+    static navigationOptions =({navigation})=> {
+        return{
+            headerLeft: () => (<Icon name='md-person' onPress={() => navigation.navigate("MyPage")} style={{ paddingLeft: 15 }} />),
+            headerTitle: () => (
+                <View>
+                    <Text style={{fontSize: 20,color:"#ED1935"}}>
+                        Mirror Class
+                    </Text>
+                </View>),
+            headerRight: ()=>(<Icon name='md-chatboxes' onPress={() => navigation.navigate("FamilyChat")} style={{paddingRight:15}} />)    
+        }
     }
  
     render(){
@@ -75,16 +87,3 @@ class MainScreen extends Component {
 }
  
 
-export default MainScreen;
-
-const style = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title:{
-        color: "white",
-        fontSize: 30
-    }
-})

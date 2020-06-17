@@ -7,14 +7,16 @@ import {
     StyleSheet
 } from 'react-native';
 import {widthPercentageToDP, heightPercentageToDP } from 'react-native-responsive-screen';
+import MyPage from './AppTabNavigator/Mypage';
+
 
 export default class LoginScreen extends Component{
-    
-    _doLogin(){
-        this.props.navigation.replace('TabNavigator')
+    constructor(props){
+        super(props);
+        this.state={NickName:""};
     }
-
     render(){
+        const {NickName} = this.state;
         return (
             <View style={styles.container}>
                 <View style={styles.titleArea}>
@@ -23,7 +25,9 @@ export default class LoginScreen extends Component{
                 <View style={styles.formArea}>
                     <TextInput 
                         style={styles.textForm} 
-                        placeholder={"NickName"}/>
+                        placeholder={"NickName"}
+                        onChangeText={this._ChangeNick(NickName)}
+                        />
                 </View>
                 <View style={styles.buttonArea}>
                     <TouchableOpacity 
@@ -35,6 +39,14 @@ export default class LoginScreen extends Component{
             </View>
         );
     }
+    _ChangeNick = (text)=>{
+        this.setState={NickName:text}
+    }
+    _doLogin(){
+        this.props.navigation.replace('MainScreen')
+        return <MyPage Nick={this.props.NickName}/>
+    }
+
 }
 
 const styles = StyleSheet.create({

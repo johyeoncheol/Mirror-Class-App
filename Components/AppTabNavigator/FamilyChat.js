@@ -11,7 +11,7 @@ export default class FamilyChat extends Component {
     render() {
         return (
             <View style={style.container}>
-                <Text>FamilyChatTab</Text>
+                <Text>개발중에 있습니다.</Text>
             </View>
         );
     }

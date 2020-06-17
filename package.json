@@ -30,11 +30,6 @@
     "react-navigation-tabs": "^2.8.12",
     "types": "^0.1.1"
   },
-  "rnpm": {
-    "assets": [
-      "./assets/fonts"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0"
