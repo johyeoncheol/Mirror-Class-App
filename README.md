@@ -24,10 +24,5 @@
 <div style="flex-direction: row;">
   <img src="https://user-images.githubusercontent.com/50797070/100579459-a29ef680-3327-11eb-89dc-d20b61e843af.jpg" width="250" height="500"/>
   <img src="https://user-images.githubusercontent.com/50797070/100579466-a3d02380-3327-11eb-963d-a59138a2eba5.jpg" width="250" height="500"/>
-</div>
-
-<div style="flex-direction: row;">
   <img src="https://user-images.githubusercontent.com/50797070/100579467-a3d02380-3327-11eb-822e-402ee4efa28b.jpg" width="250" height="500"/>
-  <img src="https://user-images.githubusercontent.com/50797070/100570819-f94f0500-3314-11eb-834d-238cdb2408a6.jpg" width="250" height="500"/>
-  <img src="https://user-images.githubusercontent.com/50797070/100571034-79756a80-3315-11eb-8243-6536e139fbb8.jpg" width="250" height="500"/>
 </div>
